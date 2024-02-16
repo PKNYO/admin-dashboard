@@ -71,14 +71,90 @@
         }
     }
 
-    .header {
+    > .header {
         display: grid;
         grid-column: 2 / 3;
         grid-row: 1 / 2;
         background-color: var(--white);
+        padding: 0 50px;;
+
+        > .row-1 {
+            display: flex;
+            justify-content: space-between;
+
+            > .left {
+                display: flex;
+                align-items: center;
+
+                > svg {
+                    height: 30px;
+                    margin-right: 10px;
+                }
+
+                > input {
+                    height: 30px;
+                    border-radius: 15px;
+                    border: none;
+                    background-color: var(--gray);
+                    width: 600px;
+                }
+            }
+
+            > .right {
+                display: flex;
+                align-items: center;
+                font-weight: bold;
+
+                > svg {
+                    height: 30px;
+                }
+
+                > img {
+                    height: 40px;
+                    width: 40px;
+                    object-fit: cover;
+                    border-radius: 20px;
+                    margin: 0 30px;
+                }
+            }
+        }  
+        
+        .row-2 {
+            display: flex;
+            justify-content: space-between;
+
+            .left {
+                display: flex;
+                align-items: center;
+
+                > img {
+                    height: 60px;
+                    width: 60px;
+                    object-fit: cover;
+                    border-radius: 30px;
+                    padding-right: 15px;
+                }
+            }
+
+            .right {
+                display: flex;
+                align-items: center;
+
+                > button {
+                    background-color: var(--blue);
+                    border: none;
+                    height: 30px;
+                    width: 75px;
+                    border-radius: 15px;
+                    font-weight: bold;
+                    color: var(--white);
+                    margin: 0 10px;
+                }
+            }
+        }
     }
 
-    .main-content {
+    > .main-content {
         display: grid;
         grid-column: 2 / 3;
         grid-row: 2 / 3;
