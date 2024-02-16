@@ -11,9 +11,9 @@
 
 .main-container {
     display: grid;
-    grid-template-columns: 0.2fr 0.8fr;
-    grid-template-rows: 0.2fr 0.8fr;
     height: 100vh;
+    grid-template-columns: 0.2fr 0.8fr;
+    grid-template-rows: 150px 1fr;
 
     > .sidebar {
         display: grid;
@@ -162,13 +162,113 @@
         grid-template-columns: 70% 1fr;
 
         > .left {
-            background-color: green;
+            background-color: var(--gray);
+            display: grid;
+            grid-template-rows: 60px 1fr;
+            grid-column: 1 / 2;
+
+            > .left-grid-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+                gap: 20px;
+                padding: 20px;
+                overflow: auto;
+
+                > .project-card {
+                    display: flex;
+                    flex-direction: column;
+                    background-color: var(--white);
+                    border-radius: 10px;
+                    border-left: solid 10px var(--yellow);
+                    justify-content: space-between;
+
+                    > h4 {
+                        margin: 20px 0 0 15px;
+                    }
+
+                    > p {
+                        font-size: 0.8rem;
+                        margin: 5px 15px;
+                    }
+
+                    > .svg-box {
+                        display: flex;
+                        gap: 10px;
+                        justify-content: flex-end;
+                        padding: 20px;
+
+                        > svg {
+                            height: 25px;
+                            position: relative;
+                        }
+                    } 
+                }
+            }
         }
 
         > .right {
-            background-color: purple;
-        }
-    }
+            display: grid;
+            grid-template-rows: 1fr 1fr;
 
-    
+            > .top {
+                display: flex;
+                flex-direction: column;
+                grid-row: 1 / 2;
+                padding: 0 20px 20px 20px;
+
+                > div {
+                    flex: 1;
+                    background-color: var(--white);
+                    border-radius: 10px;
+                    padding: 30px;
+
+                    > p {
+                        font-size: 0.7rem;
+                        padding: 10px 0;
+                    }
+
+                    > hr {
+                        margin: 10px;
+                    }
+                }
+            }
+
+            > .down {
+                display: flex;
+                flex-direction: column;
+                grid-row: 2 / 3;
+                padding: 0 20px 20px 20px;
+
+                > div {
+                    flex: 1;
+                    background-color: var(--white);
+                    border-radius: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 50px;
+
+                    > div {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+
+                        > img {
+                            height: 60px;
+                            width: 60px;
+                            border-radius: 30px;
+                        }
+
+                        > div {
+                            padding: 30px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .title {
+            padding: 30px 20px 30px 20px;
+        }
+    } 
 }
