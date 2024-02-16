@@ -159,5 +159,16 @@
         grid-column: 2 / 3;
         grid-row: 2 / 3;
         background-color: var(--gray);
+        grid-template-columns: 70% 1fr;
+
+        > .left {
+            background-color: green;
+        }
+
+        > .right {
+            background-color: purple;
+        }
     }
+
+    
 }
