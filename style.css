@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    --blue : #1992D3;
+    --white : #FFFFFF;
+    --yellow : #F0B329;
+    --gray : #E2E8F0;
+    margin: 0;
+    font-family: 'Roboto', 'Courier New', Courier, monospace;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 0.2fr 0.8fr;
+    grid-template-rows: 0.2fr 0.8fr;
+    height: 100vh;
+
+    > .sidebar {
+        display: grid;
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+        background-color: var(--blue);
+        grid-template-rows: repeat(8, 1fr);
+
+        > .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            color: var(--white);
+            grid-row: 1 / 2;
+            gap: 15px;
+
+            > svg {
+                fill: var(--white);
+                height: 60px;
+            }
+        }
+
+        > .buttons-1 {
+            grid-row: 2 / 5;
+        }
+
+        > .buttons-2 {
+            grid-row: 5 / 9;
+        }
+
+        > .buttons-1, .buttons-2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            color: var(--white);
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding-left: 40px;
+            padding-top: 20px;
+            gap: 10px;
+
+            > div {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                > svg {
+                    height: 30px;
+                    fill: var(--white);
+                }
+            }
+        }
+    }
+
+    .header {
+        display: grid;
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        background-color: var(--white);
+    }
+
+    .main-content {
+        display: grid;
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        background-color: var(--gray);
+    }
+}
